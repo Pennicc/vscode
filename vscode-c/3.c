@@ -15,7 +15,7 @@ int main(){
         }
         if ( isPrime == 1 ) {
             cnt++;
-            printf( "%d ", x);
+            printf( "%d\t ", x);
             if(cnt%5==0)
                 printf("\n");
         }
