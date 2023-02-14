@@ -2,6 +2,8 @@
 
 int main(){
     int x;
+    int cnt = 0;
+
     for ( x=1; x<=100; x++) {
         int i;
         int isPrime = 1;//x是素数
@@ -12,7 +14,10 @@ int main(){
             }
         }
         if ( isPrime == 1 ) {
+            cnt++;
             printf( "%d ", x);
+            if(cnt%5==0)
+                printf("\n");
         }
     }
     return 0;
