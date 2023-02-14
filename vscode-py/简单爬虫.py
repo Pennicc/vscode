@@ -4,8 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # 目标网页 URL
-url = 'https://www.example.com/'
-
+#url = 'https://www.example.com/'
+url = 'https://www.yinfans.me/'
 # 发送 GET 请求并获取网页内容
 response = requests.get(url)
 content = response.content
