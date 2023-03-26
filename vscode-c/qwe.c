@@ -8,7 +8,7 @@ int main()
 	
 	char *a[10] = {"0030", "0031", "0032", "0033", "0034", "0035", "0036", "0037", "0038", "0039"}; // 字库
 	char *b[12];
-
+char finall[127];
 	int j;
 	for (j = 0; j <=12; j++)
 	{
@@ -16,9 +16,10 @@ int main()
 	} // 这里实现纬度转码
 
 
-	// sprintf(finally_1, "%s%s", finally[0], finally[1]);
+	sprintf(finall, "%s%s", b[0], b[1]);
 	// 这里实现转码后的拼接
 	// printf("%s ", b);
+	printf("%s ", finall);
 	for (j = 0; j <12; j++)
 	{
 		printf("%s ", b[j]);
