@@ -1,15 +1,7 @@
 #include <stdio.h>
 int main(){
-    int target = 3, result;
 
-    int a=1, b=1 , c;
-    for(int i=2 ; i < target ; ++i){
-        c = a+b;
-        a = b;
-        b = c;
-    }
-    result = c;
-    printf("%d" , result);
+    printf("asdasd");
     return 0;
 }
 
@@ -39,8 +31,20 @@ int main(){
 
 
 
-
-
+/*************fei bo na qie******************
+int main(){
+    int target = 3, result;
+    int a=1, b=1 , c;
+    for(int i=2 ; i < target ; ++i){
+        c = a+b;
+        a = b;
+        b = c;
+    }
+    result = c;
+    printf("%d" , result);
+    return 0;
+}
+*/
 /**************cheng fa biao*****************
 int main(){
     int i , j ;
