@@ -30,10 +30,12 @@
 	    3. 2>或&>  file：将由命令产生的错误信息输出到文件中
 	    4. < file：将file文件重定向为输入源
     4.命令置换
-        将一个命令的输出作为另一个命令的参数
----
+        将一个命令的输出作为另一个命令的参数  
+
+---  
+
 # 系统维护命令
-1. man手册
+1. man手册  
     man man：查看man手册
     1. Executable programs or shell commands（可执行程序或shell令）
     2. System calls (系统调用)
