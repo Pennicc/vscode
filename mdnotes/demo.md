@@ -47,4 +47,33 @@ asdasgfdfgfd
 ___
 
 
-[skd](mdnotes\md语法.md)
+
+[`skd`](mdnotes\md语法.md)  [1] 
+
+
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle  
+
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"  
+
+
+
+[inmage] ![这是图片](https://markdown.com.cn/assets/img/philly-magic-garden.9c0b4415.jpg)
+
+[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg)](https://markdown.com.cn)  
+
+
+
+&copy;  
+AT&T  AT&amp;T  
+
+This is a regular paragraph.
+
+<table>
+    <tr>
+        <td>Foghfghjghjghjghghhjghgo</td>
+    </tr>
+</table>
+
+This is another regular paragraph.  
+
+italic and **bold**
