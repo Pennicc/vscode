@@ -1,9 +1,6 @@
 #include <stdio.h>
 int main(){
 
-
-
-
     return 0;
 }
 
@@ -19,6 +16,35 @@ int main(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************cheng fa biao*****************
+int main(){
+    int i , j ;
+    for(i=1 ; i<10 ; i++){
+        for(j=1 ; j<10 ;j++){
+            if(i<j) break;
+            printf("%d x %d = %-2d  ",i,j,i*j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
 /**********shui xian hua shu*****************
 int main(){
     int i =100;
@@ -29,7 +55,7 @@ int main(){
     }
     return 0;
 }
-
+*/
 /**********************************************************************************************
 int scf(int inp);
 int main() {
