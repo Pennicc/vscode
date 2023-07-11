@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/ip.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <string.h>
+
+int main(int argc, char const *argv[])
+{
+    //
+    int sockfd;
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd <0)
+    {
+        printf("socket error!\n");
+        return 0;
+    }
+
+
+
+    //绑定套接字
+    struct sockaddr_in addr;
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(8888);
+    addr.sin_addr.s_addr = inet_addr("192.168.51.111");
+    int addrlen = sizeof(addr);
+    if (bind (sockfd, (struct sockaddr *)&addr, addrlen)<0)
+    {
+        printf ( "bind error!\n");
+        return -1;
+    }
+
+
+
+    //启动监听
+    if (listen(sockfd, 5))
+    {
+        printf("listen error!in");
+        return-1;
+    }
+
+    //接受客户端的链接请求
+    printf( "wait client connect......\n");
+    int clifd;
+    clifd = accept(sockfd,NULL,NULL);
+    if (clifd< 0)
+    {
+        printf( "accept error!");
+        return -1;
+    }
+    printf("link success!\n");
+    int ret;
+    char buf[64] = {0};
+    while (1)
+    {
+        ret = recv(clifd, buf,64,0);
+        if (ret <0)
+        {
+            printf("recv error!\n");
+            continue;
+        }
+
+        else if (ret > 0)
+        {
+            printf("%s\n", buf);
+            bzero(buf,64);
+        }
+        else if (ret == 0)
+        {
+            printf(" peer quitin");
+            break;
+        }
+    }
+    close(clifd);
+    close(sockfd);
+    return 0;
+}
+
+
