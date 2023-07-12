@@ -8,7 +8,7 @@ int main(){
     printf("%d\n", a[1]);
 
 
-
+    printf("awdadad\n");
     return 0;
 
 
