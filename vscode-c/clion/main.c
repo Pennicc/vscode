@@ -1,23 +1,14 @@
 #include <stdio.h>
 int main(){
+    int a[]={1,2,3,4}, *p=a, b=a[2];
+//    int **p;
+    printf("%p\n", p);
+    printf("%p\n", a);
+    printf("%d\n", p[1]);
+    printf("%d\n", a[1]);
 
-    printf("asdasd");
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
