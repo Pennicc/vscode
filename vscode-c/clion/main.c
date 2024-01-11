@@ -8,6 +8,7 @@ int main(){
     printf("%d\n", a[1]);
 
 
+
     return 0;
 
 
