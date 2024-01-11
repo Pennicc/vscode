@@ -6,6 +6,7 @@
     "configurations": [
         
         
+        
         {
             "name": "编译并运行",
             "type": "cppvsdbg",
