@@ -15,14 +15,17 @@ events = {
     2024: "新周期",
 }
 
-# 设置柱状图的宽度和位置
-bar_width = 0.4  # 柱状图的宽度（相对于年份间隔）
-bar_x_offset = -bar_width / 2  # 柱状图相对于年份的中心点的x轴偏移量
+# 设置图表元素宽度
+bar_width = 0.6  # 柱状图的宽度（相对于年份间隔）
+line_width = 4   # 折线图的线条粗细
+
+# 设置柱状图的位置偏移量
+bar_x_offset = -bar_width / 2
 
 plt.figure(figsize=(12, 6))
 
 # 绘制折线图（金色加粗）
-plt.plot(years, industry_size, color='#4CAF50', linewidth=2, label="产业规模折线图")
+plt.plot(years, industry_size, color='#4CAF50', linewidth=line_width, label="产业规模折线图")
 
 # 绘制柱状图
 bar_years = [y + bar_x_offset for y in years]
@@ -41,7 +44,7 @@ for year, event in events.items():
     idx = years.tolist().index(year)
     plt.axvline(x=year + bar_x_offset, color='r', linestyle='--', alpha=0.7)
     # 动态计算文本位置，避免重叠
-    text_y = max(0, industry_size[idx] - (200 if year < 2023 else 300))  # 根据需要微调偏移量，避免超出图表范围
+    text_y = max(0, industry_size[idx] - (200 if year < 2023 else 300))
     plt.text(year + bar_x_offset, text_y, f"{event}\n({year})", ha='center', va='top', fontsize=9)
 
 # 设置图表标题和轴标签
